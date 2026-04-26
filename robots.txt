@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fusionprep-ai.example.com/sitemap.xml
