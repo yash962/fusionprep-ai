@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FusionPrep AI | Oracle HCM Cloud Learning Platform</title>
+    <meta
+      name="description"
+      content="Daily original Oracle HCM Cloud interview prep, implementation scenarios, AI Agent Studio notes, and release-readiness links from FusionPrep AI."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="FusionPrep AI home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>
+          <strong>FusionPrep AI</strong>
+          <small>HCM cloud learning platform</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#today">Today</a>
+        <a href="#paths">Paths</a>
+        <a href="#practice">Practice</a>
+        <a href="#resources">Resources</a>
+        <a href="#library">Library</a>
+        <a href="#go-live">Go Live</a>
+        <a href="#ethics">Legal</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Oracle HCM Cloud learning, in original words</p>
+          <h1>Learn HCM implementation like a consultant, not like a copy-paste reader.</h1>
+          <p>
+            FusionPrep AI turns interview preparation, implementation decisions, AI Agent Studio,
+            and release readiness into daily guided learning. Every article is written fresh and
+            links back to official Oracle sources for product authority.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#today">Start today</a>
+            <a class="button secondary" href="#practice">Try practice lab</a>
+          </div>
+          <div class="hero-stats" aria-label="FusionPrep AI site highlights">
+            <span><strong id="stat-posts">0</strong> original posts</span>
+            <span><strong id="stat-resources">0</strong> official resources</span>
+            <span><strong>Daily</strong> auto publishing</span>
+          </div>
+        </div>
+        <div class="platform-preview" aria-label="FusionPrep AI learning platform preview">
+          <img src="assets/fusionprep-learning-map.svg" alt="" />
+          <div class="signal-header">
+            <span>Learning cockpit</span>
+            <strong id="queue-count">7</strong>
+          </div>
+          <div class="signal-grid" aria-hidden="true">
+            <span class="tile interview">Interview</span>
+            <span class="tile implementation">Implementation</span>
+            <span class="tile ai">AI Studio</span>
+            <span class="tile release">Releases</span>
+          </div>
+          <div class="release-strip">
+            <span>26B watchlist</span>
+            <span>Security</span>
+            <span>HDL</span>
+            <span>Extracts</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="today" class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">Auto-selected every day</p>
+          <h2>Today on FusionPrep AI</h2>
+          <p id="today-date"></p>
+        </div>
+        <article id="today-post" class="feature-post" aria-live="polite"></article>
+      </section>
+
+      <section id="paths" class="content-band muted">
+        <div class="section-heading">
+          <p class="eyebrow">Choose a learning lane</p>
+          <h2>Guided Learning Paths</h2>
+          <p>
+            Pick the path closest to your current goal. Each path blends implementation thinking,
+            interview language, and official documentation habits.
+          </p>
+        </div>
+        <div id="path-grid" class="path-grid"></div>
+      </section>
+
+      <section id="practice" class="content-band practice-band">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive practice lab</p>
+          <h2>Build recall before interviews</h2>
+          <p>
+            Use the flashcard and checklist to rehearse answers, implementation reasoning, and
+            release-review discipline without touching restricted or copyrighted material.
+          </p>
+        </div>
+        <div class="practice-layout">
+          <article class="flashcard" aria-live="polite">
+            <div class="card-topline">
+              <span class="pill" id="flashcard-category">Interview</span>
+              <button class="icon-button" id="next-card" type="button" aria-label="Next practice card">↻</button>
+            </div>
+            <h3 id="flashcard-question"></h3>
+            <p id="flashcard-answer" hidden></p>
+            <div class="flashcard-actions">
+              <button class="button primary" id="reveal-answer" type="button">Reveal answer</button>
+              <button class="button secondary" id="save-card" type="button">Save for later</button>
+            </div>
+          </article>
+          <article class="checklist-panel">
+            <h3>Implementation readiness checklist</h3>
+            <div id="readiness-checklist" class="readiness-checklist"></div>
+            <div class="progress-shell" aria-label="Checklist progress">
+              <span id="progress-bar"></span>
+            </div>
+            <p id="progress-label">0% complete</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="resources" class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">More resources</p>
+          <h2>Official HCM Resource Center</h2>
+          <p>
+            Search learner-friendly summaries and open official Oracle pages when you need the exact
+            product wording. FusionPrep AI does not republish Oracle documentation.
+          </p>
+        </div>
+        <label class="search-box" for="resource-search">
+          <span>Search resources</span>
+          <input id="resource-search" type="search" placeholder="Try security, HDL, extracts, payroll..." />
+        </label>
+        <div id="resource-grid" class="resource-grid"></div>
+      </section>
+
+      <section id="library" class="content-band muted">
+        <div class="section-heading">
+          <p class="eyebrow">Original content channels</p>
+          <h2>Learning Library</h2>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter posts">
+          <button class="filter active" data-filter="All" type="button">All</button>
+          <button class="filter" data-filter="Interview" type="button">Interview</button>
+          <button class="filter" data-filter="Implementation" type="button">Implementation</button>
+          <button class="filter" data-filter="AI Agents" type="button">AI Agents</button>
+          <button class="filter" data-filter="Latest Releases" type="button">Latest Releases</button>
+        </div>
+        <div id="post-grid" class="post-grid"></div>
+      </section>
+
+      <section id="automation" class="content-band split">
+        <div>
+          <p class="eyebrow">How daily posting works</p>
+          <h2>Automation Model</h2>
+          <p>
+            The website reads from a content file. A scheduled workflow can run once per day,
+            create one original post from your topic bank, and publish it to the site without
+            manual copying.
+          </p>
+        </div>
+        <ol class="process-list">
+          <li>
+            <strong>Topic queue</strong>
+            <span>Interview, implementation, AI Agent Studio, and release-readiness themes rotate daily.</span>
+          </li>
+          <li>
+            <strong>Original draft</strong>
+            <span>The generator writes fresh wording, business context, interview checks, and source links.</span>
+          </li>
+          <li>
+            <strong>Source-first publishing</strong>
+            <span>Oracle pages are linked as references; Oracle content is not republished.</span>
+          </li>
+          <li>
+            <strong>Website update</strong>
+            <span>The new post appears in the archive after the scheduled commit/deploy step.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="go-live" class="content-band deploy-band">
+        <div class="section-heading">
+          <p class="eyebrow">Publishing status</p>
+          <h2>Ready to go live</h2>
+          <p>
+            This folder is prepared for public hosting. Connect it to your hosting account and the
+            included daily workflow can publish fresh original posts.
+          </p>
+        </div>
+        <div class="deploy-grid">
+          <article>
+            <strong>GitHub Pages</strong>
+            <span>Push this folder to a repository, enable Pages, and keep the daily workflow active.</span>
+          </article>
+          <article>
+            <strong>Netlify</strong>
+            <span>Drag the folder into Netlify or connect the repo. The included config publishes the site root.</span>
+          </article>
+          <article>
+            <strong>Vercel</strong>
+            <span>Import the project as a static site. No build command is required.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-band sources">
+        <div class="section-heading">
+          <p class="eyebrow">Reference links</p>
+          <h2>Official Sources to Monitor</h2>
+        </div>
+        <div id="source-list" class="source-list"></div>
+      </section>
+
+      <section id="ethics" class="content-band legal-band">
+        <div>
+          <p class="eyebrow">Legal and ethical publishing</p>
+          <h2>Copyright-Safe Policy</h2>
+        </div>
+        <div class="legal-copy">
+          <p>
+            FusionPrep AI content must be original analysis, practical examples, interview framing,
+            and implementation guidance written in our own words. Do not copy Oracle documentation,
+            screenshots, tables, certification questions, training course text, or restricted My Oracle
+            Support content.
+          </p>
+          <p>
+            Oracle, Java, and related marks belong to Oracle and/or its affiliates. FusionPrep AI is an
+            independent learning project and is not affiliated with, endorsed by, or sponsored by Oracle.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>FusionPrep AI</span>
+      <span>Original learning content with official-source attribution.</span>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
