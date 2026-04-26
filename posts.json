@@ -1,0 +1,205 @@
+{
+  "site": {
+    "launchDate": "2026-04-26"
+  },
+  "sources": [
+    {
+      "title": "Oracle Cloud Applications Readiness - HCM",
+      "type": "Latest Releases",
+      "url": "https://docs.oracle.com/en/cloud/saas/readiness/hcm.html",
+      "note": "Official readiness hub for quarterly HCM updates, including current 26B materials as checked on 2026-04-26."
+    },
+    {
+      "title": "Implementing Global Human Resources",
+      "type": "Implementation",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/faigh/index.html",
+      "note": "Oracle guide for Workforce Deployment and Global HR implementation setup."
+    },
+    {
+      "title": "Human Capital Management features with AI",
+      "type": "AI Agents",
+      "url": "https://docs.oracle.com/en/cloud/saas/fusion-ai/aiafl/ai-hcm.html",
+      "note": "Official list of Oracle Fusion HCM AI and generative AI features by update."
+    },
+    {
+      "title": "Overview of AI Agent Studio",
+      "type": "AI Agents",
+      "url": "https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/overview.html",
+      "note": "Oracle overview of the design-time environment for creating, configuring, validating, and deploying AI agents."
+    },
+    {
+      "title": "Provide Access to Configure AI Agents in HCM",
+      "type": "AI Agents",
+      "url": "https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/access-to-configure-ai-agents-in-oracle-fusion-cloud-human-capital-management-hcm.html",
+      "note": "Official Oracle access guidance for users who configure AI agents in Oracle Fusion Cloud HCM."
+    },
+    {
+      "title": "Securing HCM",
+      "type": "Security",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/ochus/overview-of-securing-oracle-hcm-cloud.html",
+      "note": "Official Oracle guide for HCM function access, data roles, implementation users, role provisioning, and security administration."
+    },
+    {
+      "title": "HCM Data Loader",
+      "type": "Data Migration",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/24c/fahdl/overview-of-hcm-data-loader.html",
+      "note": "Official Oracle guidance for bulk-loading and maintaining HCM business objects through HCM Data Loader."
+    },
+    {
+      "title": "HCM Extracts",
+      "type": "Integrations",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/25a/fahex/introduction-to-hcm-extracts.html",
+      "note": "Official Oracle guide for outbound HCM extracts, data groups, records, delivery options, and integrations."
+    },
+    {
+      "title": "Implementing Global Payroll",
+      "type": "Payroll",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/faigp/setup-tasks-for-implementing-global-payroll.html",
+      "note": "Official Oracle setup sequence and implementation considerations for Global Payroll."
+    },
+    {
+      "title": "Implementing Absence Management",
+      "type": "Absence",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/25b/faiam/index.html",
+      "note": "Official Oracle implementation guide for absence plans, types, eligibility, formulas, approvals, and integrations."
+    },
+    {
+      "title": "Administering Analytics and Reports for HCM",
+      "type": "Analytics",
+      "url": "https://docs.oracle.com/en/cloud/saas/human-resources/25b/fahca/index.html",
+      "note": "Official Oracle guide for OTBI, reports, dashboards, flexfields, permissions, and analytics administration."
+    }
+  ],
+  "paths": [
+    {
+      "title": "Functional Consultant Starter",
+      "level": "Beginner",
+      "duration": "2 weeks",
+      "summary": "Build vocabulary around enterprise structures, workforce deployment, security basics, and interview-ready explanations.",
+      "steps": [
+        "Enterprise and legal structure concepts",
+        "Core HR setup decision log",
+        "Security role vocabulary",
+        "Daily interview answer rehearsal"
+      ]
+    },
+    {
+      "title": "Implementation Lead Readiness",
+      "level": "Intermediate",
+      "duration": "4 weeks",
+      "summary": "Practice project framing: scope, design workshops, tenant readiness, migration, integrations, testing, and release sign-off.",
+      "steps": [
+        "Global template and local variation",
+        "HDL and extracts planning",
+        "Regression test ownership",
+        "Release impact communication"
+      ]
+    },
+    {
+      "title": "AI Agent Studio for HCM",
+      "level": "Advanced",
+      "duration": "10 days",
+      "summary": "Learn how to think about HCM agents through governance, approved knowledge sources, persona testing, and sensitive-data boundaries.",
+      "steps": [
+        "Agent purpose and ownership",
+        "Knowledge source review",
+        "Security and role access",
+        "Persona and refusal testing"
+      ]
+    }
+  ],
+  "practiceCards": [
+    {
+      "category": "Interview",
+      "question": "How would you explain the difference between legal employer and business unit in Oracle HCM?",
+      "answer": "A legal employer is tied to employment and statutory responsibilities. A business unit is usually about transaction processing, reference data, and operational grouping. In interviews, connect both to the actual enterprise model."
+    },
+    {
+      "category": "Implementation",
+      "question": "What should you validate before configuring workforce structures?",
+      "answer": "Validate rollout countries, legal entities, business units, departments, reference data sharing, security owners, and downstream reporting or integration needs."
+    },
+    {
+      "category": "Security",
+      "question": "Why are function access and data access treated separately?",
+      "answer": "Function access controls what a user can do. Data access controls which people, organizations, or records the user can see. A consultant should design and test both."
+    },
+    {
+      "category": "AI Agents",
+      "question": "What is a responsible first step before building an HCM AI agent?",
+      "answer": "Define the business purpose, owner, allowed knowledge sources, security boundaries, escalation path, and test personas before configuration starts."
+    },
+    {
+      "category": "Latest Releases",
+      "question": "How should a quarterly HCM release review be converted into action?",
+      "answer": "Map official readiness items to enabled modules, identify opt-in and regression needs, assign owners, test critical transactions, and communicate user-facing changes."
+    }
+  ],
+  "checklist": [
+    "Confirm business scope and countries",
+    "Document enterprise and legal structure decisions",
+    "Validate HCM security roles and data access",
+    "Prepare HDL or migration assumptions",
+    "Review integrations and HCM Extracts needs",
+    "Map quarterly release notes to regression tests",
+    "Keep public learning content original and source-linked"
+  ],
+  "posts": [
+    {
+      "id": "hcm-interview-enterprise-structures",
+      "date": "2026-04-26",
+      "category": "Interview",
+      "readTime": "5 min",
+      "title": "Interview drill: enterprise, legal employer, business unit, and department",
+      "summary": "For a consultant interview, answer with the business model first: who employs people, where transactions are processed, how departments group workers, and how reporting needs are met.",
+      "takeaways": [
+        "Enterprise is the top-level HCM structure, while legal employers represent employment and statutory obligations.",
+        "Business units often support transaction processing and reference data decisions.",
+        "Departments, jobs, positions, grades, and locations make the workforce model usable for HR operations."
+      ],
+      "sourceTitle": "Implementing Global Human Resources"
+    },
+    {
+      "id": "implementation-use-case-global-rollout",
+      "date": "2026-04-25",
+      "category": "Implementation",
+      "readTime": "6 min",
+      "title": "Implementation use case: global HR rollout design workshop",
+      "summary": "A multinational rollout should begin with country scope, legal employer design, shared reference data, security responsibilities, and a cutover plan before detailed configuration starts.",
+      "takeaways": [
+        "Create a decision log for enterprise structure assumptions.",
+        "Separate global standards from country-specific statutory requirements.",
+        "Validate security and data roles before opening configuration to a wider team."
+      ],
+      "sourceTitle": "Implementing Global Human Resources"
+    },
+    {
+      "id": "ai-agent-studio-hcm-governance",
+      "date": "2026-04-24",
+      "category": "AI Agents",
+      "readTime": "4 min",
+      "title": "AI Agent Studio for HCM: what to govern before the first agent",
+      "summary": "Before building an HCM agent, define the agent owner, allowed knowledge sources, data boundaries, approval workflow, test scenarios, and escalation path for sensitive employee questions.",
+      "takeaways": [
+        "Keep HR policy and employee data access under formal ownership.",
+        "Test with real HCM roles such as employee, line manager, HR specialist, and administrator.",
+        "Do not use confidential client material or restricted support content in public examples."
+      ],
+      "sourceTitle": "Overview of AI Agent Studio"
+    },
+    {
+      "id": "release-readiness-hcm-26b",
+      "date": "2026-04-23",
+      "category": "Latest Releases",
+      "readTime": "4 min",
+      "title": "Release readiness: how to approach Oracle HCM 26B",
+      "summary": "Review the official readiness hub by product family, identify enabled features, check opt-in behavior, and build a focused regression pack for transactions that matter to your organization.",
+      "takeaways": [
+        "Start with modules in production, then review adjacent shared areas such as security and common user experience.",
+        "Convert release notes into test cases, owner names, and go/no-go checkpoints.",
+        "Link to Oracle readiness pages instead of copying release-note text."
+      ],
+      "sourceTitle": "Oracle Cloud Applications Readiness - HCM"
+    }
+  ]
+}
