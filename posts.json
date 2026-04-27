@@ -1,0 +1,358 @@
+{
+  "site": {
+    "launchDate": "2026-04-26"
+  },
+  "resources": [
+    {
+      "title": "Core HR Implementation Roadmap",
+      "type": "Implementation",
+      "note": "A FusionPrep AI roadmap for enterprise structures, legal employers, business units, departments, jobs, positions, and go-live validation."
+    },
+    {
+      "title": "Security Design Notes",
+      "type": "Security",
+      "note": "Original learner notes for role design, function access, data access, provisioning, testing, and production support ownership."
+    },
+    {
+      "title": "HCM Data Loader Planner",
+      "type": "Data Migration",
+      "note": "A practical migration planner covering object ownership, templates, validation, error handling, sequencing, and reconciliation."
+    },
+    {
+      "title": "HCM Extracts Design Card",
+      "type": "Integrations",
+      "note": "A learner-friendly design card for outbound files, extract criteria, schedules, delivery options, and integration testing."
+    },
+    {
+      "title": "Payroll Discovery Starter",
+      "type": "Payroll",
+      "note": "Discovery prompts for payroll scope, calendars, balances, elements, costing, integrations, controls, and parallel testing."
+    },
+    {
+      "title": "Absence Configuration Map",
+      "type": "Absence",
+      "note": "Original notes for absence types, plans, eligibility, accrual thinking, approvals, and employee-manager experience checks."
+    },
+    {
+      "title": "Interview Answer Builder",
+      "type": "Interview",
+      "note": "Answer structures for explaining HCM design choices with business context, risks, examples, and consultant-level clarity."
+    },
+    {
+      "title": "AI Agent Studio Governance Notes",
+      "type": "AI Agents",
+      "note": "Governance prompts for agent purpose, knowledge boundaries, persona testing, approvals, sensitive scenarios, and fallback paths."
+    },
+    {
+      "title": "Quarterly Release Impact Planner",
+      "type": "Latest Releases",
+      "note": "A practical template for reviewing quarterly changes, regression scope, optional features, owners, and stakeholder communication."
+    }
+  ],
+  "paths": [
+    {
+      "title": "Functional Consultant Starter",
+      "level": "Beginner",
+      "duration": "2 weeks",
+      "summary": "Build vocabulary around enterprise structures, workforce deployment, security basics, and interview-ready explanations.",
+      "steps": [
+        "Enterprise and legal structure concepts",
+        "Core HR setup decision log",
+        "Security role vocabulary",
+        "Daily interview answer rehearsal"
+      ]
+    },
+    {
+      "title": "Implementation Lead Readiness",
+      "level": "Intermediate",
+      "duration": "4 weeks",
+      "summary": "Practice project framing: scope, design workshops, tenant readiness, migration, integrations, testing, and release sign-off.",
+      "steps": [
+        "Global template and local variation",
+        "Migration and extract planning",
+        "Regression test ownership",
+        "Release impact communication"
+      ]
+    },
+    {
+      "title": "AI Agent Studio for HCM",
+      "level": "Advanced",
+      "duration": "10 days",
+      "summary": "Learn how to think about HCM agents through governance, approved knowledge, persona testing, and sensitive-data boundaries.",
+      "steps": [
+        "Agent purpose and ownership",
+        "Knowledge source review",
+        "Security and role access",
+        "Persona and refusal testing"
+      ]
+    }
+  ],
+  "moduleGuides": [
+    {
+      "module": "Core HR",
+      "level": "Foundation",
+      "title": "Core HR implementation guide",
+      "summary": "Use Core HR to explain the enterprise model, worker lifecycle, workforce structures, and the decisions that affect every downstream HCM module.",
+      "implementation": [
+        "Confirm enterprise, legal employer, business unit, department, location, job, position, and grade usage.",
+        "Document country rollout waves and which structures are global versus local.",
+        "Validate reference data sharing, approvals, security, conversion, and reporting needs before configuration."
+      ],
+      "interview": [
+        "Explain enterprise structure with a business example instead of a definition-only answer.",
+        "Describe why legal employer and business unit decisions affect reporting, security, and integrations.",
+        "Mention testing across hire, transfer, termination, manager self-service, and HR specialist transactions."
+      ]
+    },
+    {
+      "module": "Security",
+      "level": "Foundation",
+      "title": "HCM security implementation guide",
+      "summary": "Security design should separate what a user can do from which workforce records the user can access.",
+      "implementation": [
+        "Map personas such as employee, line manager, HR specialist, payroll user, recruiter, and administrator.",
+        "Design role provisioning and data access before user acceptance testing.",
+        "Prepare positive and negative test cases for sensitive worker and salary information."
+      ],
+      "interview": [
+        "Differentiate function access and data access in plain language.",
+        "Use a manager example to explain why security testing must include record visibility.",
+        "Call out segregation of duties, audit readiness, and least-privilege access."
+      ]
+    },
+    {
+      "module": "Data Migration",
+      "level": "Intermediate",
+      "title": "HCM Data Loader implementation guide",
+      "summary": "Migration success depends on ownership, data quality, sequencing, validation, and reconciliation, not just loading files.",
+      "implementation": [
+        "Assign owners for source extraction, transformation, validation, loading, and sign-off.",
+        "Sequence foundation objects before workers, assignments, compensation, and module-specific records.",
+        "Track load errors, correction rules, reconciliation counts, and cutover timing."
+      ],
+      "interview": [
+        "Explain why configuration and migration teams must work together.",
+        "Discuss common risks: invalid references, duplicate workers, date-effective issues, and missing mandatory values.",
+        "Describe how you would prove conversion accuracy before go-live."
+      ]
+    },
+    {
+      "module": "Integrations",
+      "level": "Intermediate",
+      "title": "HCM Extracts implementation guide",
+      "summary": "Extracts translate HCM data into outbound files or payloads for payroll, benefits, identity, reporting, or third-party systems.",
+      "implementation": [
+        "Confirm the receiving system, population criteria, frequency, file format, and delivery method.",
+        "Design filters, effective dates, change detection, and reconciliation totals.",
+        "Test initial, incremental, exception, and no-change scenarios."
+      ],
+      "interview": [
+        "Explain extract design as a business data contract.",
+        "Mention scheduling, delivery, error handling, and downstream reconciliation.",
+        "Use a payroll or identity feed example to show practical understanding."
+      ]
+    },
+    {
+      "module": "Payroll",
+      "level": "Advanced",
+      "title": "Payroll implementation guide",
+      "summary": "Payroll design requires careful discovery across calendars, elements, costing, balances, retro rules, integrations, and controls.",
+      "implementation": [
+        "Capture pay groups, payroll calendars, element categories, costing segments, and statutory variation.",
+        "Plan parallel payroll testing with clear success criteria and exception handling.",
+        "Coordinate payroll with Core HR, absence, time, benefits, finance, and reporting owners."
+      ],
+      "interview": [
+        "Show awareness that payroll is highly country-sensitive and control-heavy.",
+        "Explain why parallel testing and reconciliation are non-negotiable.",
+        "Discuss upstream dependency risks from HR, time, absence, and compensation."
+      ]
+    },
+    {
+      "module": "Absence",
+      "level": "Intermediate",
+      "title": "Absence Management implementation guide",
+      "summary": "Absence design connects policy rules with eligibility, accruals, approvals, employee experience, payroll, and reporting.",
+      "implementation": [
+        "Gather policy rules for types, plans, eligibility, accruals, carryover, waiting periods, and approvals.",
+        "Test employee submission, manager approval, HR correction, payroll impact, and reporting scenarios.",
+        "Confirm country or legal employer variations before global template sign-off."
+      ],
+      "interview": [
+        "Explain the difference between absence types, plans, eligibility, and accrual logic.",
+        "Use maternity, sick leave, or annual leave as practical examples.",
+        "Mention integration points with payroll, time, and workforce scheduling."
+      ]
+    }
+  ],
+  "labs": [
+    {
+      "module": "Core HR",
+      "duration": "30 min",
+      "title": "Design a two-country enterprise structure",
+      "scenario": "A company is rolling out HCM in India and the United States with shared departments but country-specific legal employers.",
+      "tasks": [
+        "List enterprise, legal employer, business unit, department, location, job, and position decisions.",
+        "Identify which decisions are global and which are country-specific.",
+        "Write three interview points explaining your design."
+      ]
+    },
+    {
+      "module": "Security",
+      "duration": "25 min",
+      "title": "Create persona-based security tests",
+      "scenario": "An HR specialist, manager, and employee need different access to worker and assignment data.",
+      "tasks": [
+        "Create one positive and one negative test for each persona.",
+        "Separate function access tests from data visibility tests.",
+        "Write a short risk note for over-permissioned users."
+      ]
+    },
+    {
+      "module": "Data Migration",
+      "duration": "35 min",
+      "title": "Plan a worker conversion cycle",
+      "scenario": "A client wants to load foundation data and active workers before UAT.",
+      "tasks": [
+        "Define the load sequence and owner for each stage.",
+        "Prepare validation checks for counts, dates, departments, managers, and assignments.",
+        "Create an error triage plan for failed worker records."
+      ]
+    },
+    {
+      "module": "AI Agents",
+      "duration": "20 min",
+      "title": "Govern an HR policy assistant",
+      "scenario": "The HR team wants an AI agent to answer leave-policy questions for employees and managers.",
+      "tasks": [
+        "Define allowed and blocked question types.",
+        "List approved knowledge inputs and ownership.",
+        "Create refusal and escalation examples for sensitive requests."
+      ]
+    },
+    {
+      "module": "Latest Releases",
+      "duration": "30 min",
+      "title": "Build a quarterly release impact board",
+      "scenario": "Your tenant is receiving a quarterly update and leadership wants a short readiness view.",
+      "tasks": [
+        "Group changes by enabled module and business impact.",
+        "Identify regression tests, owners, and communications.",
+        "Write a one-paragraph executive readiness summary in your own words."
+      ]
+    }
+  ],
+  "practiceCards": [
+    {
+      "category": "Interview",
+      "question": "How would you explain the difference between legal employer and business unit in Oracle HCM?",
+      "answer": "A legal employer is tied to employment and statutory responsibilities. A business unit is usually about transaction processing, reference data, and operational grouping. In interviews, connect both to the actual enterprise model."
+    },
+    {
+      "category": "Implementation",
+      "question": "What should you validate before configuring workforce structures?",
+      "answer": "Validate rollout countries, legal entities, business units, departments, reference data sharing, security owners, and downstream reporting or integration needs."
+    },
+    {
+      "category": "Security",
+      "question": "Why are function access and data access treated separately?",
+      "answer": "Function access controls what a user can do. Data access controls which people, organizations, or records the user can see. A consultant should design and test both."
+    },
+    {
+      "category": "Data Migration",
+      "question": "What makes an HCM Data Loader cycle successful?",
+      "answer": "A successful cycle has clean source data, correct sequencing, clear ownership, repeatable validation, documented errors, reconciliation totals, and business sign-off."
+    },
+    {
+      "category": "AI Agents",
+      "question": "What is a responsible first step before building an HCM AI agent?",
+      "answer": "Define the business purpose, owner, allowed knowledge inputs, security boundaries, escalation path, and test personas before configuration starts."
+    },
+    {
+      "category": "Latest Releases",
+      "question": "How should a quarterly HCM release review be converted into action?",
+      "answer": "Map changes to enabled modules, identify optional feature decisions and regression needs, assign owners, test critical transactions, and communicate user-facing changes."
+    }
+  ],
+  "checklist": [
+    "Confirm business scope and countries",
+    "Document enterprise and legal structure decisions",
+    "Validate HCM security roles and data access",
+    "Prepare migration assumptions and reconciliation rules",
+    "Review integrations and extracts needs",
+    "Map quarterly release items to regression tests",
+    "Keep public learning content original and link-free"
+  ],
+  "posts": [
+    {
+      "id": "2026-04-27-module-guide-planning-an-absence-policy-workshop",
+      "date": "2026-04-27",
+      "category": "Implementation",
+      "readTime": "6 min",
+      "title": "Module guide: planning an absence policy workshop",
+      "summary": "A good absence workshop turns policy language into eligibility rules, plan behavior, approval flows, payroll touchpoints, and testable employee-manager scenarios.",
+      "takeaways": [
+        "Capture plan rules, eligibility, accruals, carryover, and country variation.",
+        "Test employee submission, manager approval, HR correction, and payroll impact.",
+        "Convert every policy exception into a named test scenario."
+      ],
+      "sourceTitle": "Absence Configuration Map"
+    },
+    {
+      "id": "hcm-interview-enterprise-structures",
+      "date": "2026-04-26",
+      "category": "Interview",
+      "readTime": "5 min",
+      "title": "Interview drill: enterprise, legal employer, business unit, and department",
+      "summary": "For a consultant interview, answer with the business model first: who employs people, where transactions are processed, how departments group workers, and how reporting needs are met.",
+      "takeaways": [
+        "Enterprise is the top-level HCM structure, while legal employers represent employment and statutory obligations.",
+        "Business units often support transaction processing and reference data decisions.",
+        "Departments, jobs, positions, grades, and locations make the workforce model usable for HR operations."
+      ],
+      "sourceTitle": "Interview Answer Builder"
+    },
+    {
+      "id": "implementation-use-case-global-rollout",
+      "date": "2026-04-25",
+      "category": "Implementation",
+      "readTime": "6 min",
+      "title": "Implementation use case: global HR rollout design workshop",
+      "summary": "A multinational rollout should begin with country scope, legal employer design, shared reference data, security responsibilities, migration assumptions, and a cutover plan before detailed configuration starts.",
+      "takeaways": [
+        "Create a decision log for enterprise structure assumptions.",
+        "Separate global standards from country-specific statutory requirements.",
+        "Validate security and data roles before opening configuration to a wider team."
+      ],
+      "sourceTitle": "Core HR Implementation Roadmap"
+    },
+    {
+      "id": "ai-agent-studio-hcm-governance",
+      "date": "2026-04-24",
+      "category": "AI Agents",
+      "readTime": "4 min",
+      "title": "AI Agent Studio for HCM: what to govern before the first agent",
+      "summary": "Before building an HCM agent, define the agent owner, allowed knowledge inputs, data boundaries, approval workflow, test scenarios, and escalation path for sensitive employee questions.",
+      "takeaways": [
+        "Keep HR policy and employee data access under formal ownership.",
+        "Test with real HCM roles such as employee, line manager, HR specialist, and administrator.",
+        "Do not use confidential client material or restricted support content in public examples."
+      ],
+      "sourceTitle": "AI Agent Studio Governance Notes"
+    },
+    {
+      "id": "release-readiness-impact-planning",
+      "date": "2026-04-23",
+      "category": "Latest Releases",
+      "readTime": "4 min",
+      "title": "Release readiness: how to build an HCM impact plan",
+      "summary": "Review quarterly change themes by product family, identify enabled features, check optional items, and build a focused regression pack for transactions that matter to your organization.",
+      "takeaways": [
+        "Start with modules in production, then review adjacent shared areas such as security and common user experience.",
+        "Convert update themes into test cases, owner names, and go/no-go checkpoints.",
+        "Write original internal summaries instead of copying release-note text."
+      ],
+      "sourceTitle": "Quarterly Release Impact Planner"
+    }
+  ]
+}
