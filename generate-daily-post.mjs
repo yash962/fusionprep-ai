@@ -1,122 +1,100 @@
-import { readFile, writeFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
-
-const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const dataPath = join(root, "data", "posts.json");
-
-const formatter = new Intl.DateTimeFormat("en-CA", {
-  timeZone: "Asia/Kolkata",
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-});
-
-const today = formatter.format(new Date());
-
-const topicBank = [
-  {
-    category: "Interview",
-    readTime: "5 min",
-    title: "Interview drill: explain HCM security without overcomplicating it",
-    summary:
-      "A clear answer separates job roles, duty roles, abstract roles, data roles, and role provisioning, then ties each one to what the user can see or do.",
-    takeaways: [
-      "Start with the business requirement before describing role mechanics.",
-      "Mention that function access and data access are related but not the same.",
-      "Use an example such as a manager viewing direct reports but not another department."
-    ],
-    sourceTitle: "Security Design Notes"
+{
+  "site": {
+    "launchDate": "2026-04-26"
   },
-  {
-    category: "Implementation",
-    readTime: "6 min",
-    title: "Business use case: reference data sharing during HCM design",
-    summary:
-      "Reference data choices affect how values are reused across business units, countries, and HR processes, so design decisions should be made before mass configuration.",
-    takeaways: [
-      "Identify which values are global, regional, or business-unit specific.",
-      "Document downstream impact on reporting, security, and integrations.",
-      "Avoid creating duplicate values when a shared set would support the operating model."
-    ],
-    sourceTitle: "Core HR Implementation Roadmap"
-  },
-  {
-    category: "AI Agents",
-    readTime: "4 min",
-    title: "AI Agent Studio for HCM: testing with HR personas",
-    summary:
-      "Agent testing should use realistic personas so answers, permissions, escalation behavior, and tone can be validated before production use.",
-    takeaways: [
-      "Test employee, manager, HR specialist, and administrator paths separately.",
-      "Include refusal tests for sensitive, private, or out-of-scope requests.",
-      "Keep test evidence and approvals with the release record."
-    ],
-    sourceTitle: "AI Agent Studio Governance Notes"
-  },
-  {
-    category: "Latest Releases",
-    readTime: "4 min",
-    title: "Release habit: turn readiness notes into an HCM action list",
-    summary:
-      "Each quarterly readiness review should end with owners, test cases, communication notes, opt-in decisions, and a short list of risks for leadership.",
-    takeaways: [
-      "Focus first on product areas live in your tenant.",
-      "Capture changes that affect security, integrations, approvals, and user experience.",
-      "Write your own internal summary and do not copy release-note wording."
-    ],
-    sourceTitle: "Quarterly Release Impact Planner"
-  },
-  {
-    category: "Implementation",
-    readTime: "6 min",
-    title: "Module guide: planning an absence policy workshop",
-    summary:
-      "A good absence workshop turns policy language into eligibility rules, plan behavior, approval flows, payroll touchpoints, and testable employee-manager scenarios.",
-    takeaways: [
-      "Capture plan rules, eligibility, accruals, carryover, and country variation.",
-      "Test employee submission, manager approval, HR correction, and payroll impact.",
-      "Convert every policy exception into a named test scenario."
-    ],
-    sourceTitle: "Absence Configuration Map"
-  },
-  {
-    category: "Interview",
-    readTime: "5 min",
-    title: "Interview drill: explaining HCM Data Loader risk",
-    summary:
-      "A senior answer frames migration as a controlled business cycle with ownership, sequencing, validations, errors, reconciliation, and sign-off.",
-    takeaways: [
-      "Mention foundation data sequencing before worker and assignment data.",
-      "Discuss validation for counts, dates, references, managers, and duplicates.",
-      "Explain why reconciliation evidence matters before go-live."
-    ],
-    sourceTitle: "HCM Data Loader Planner"
-  }
-];
-
-const raw = await readFile(dataPath, "utf8");
-const data = JSON.parse(raw);
-
-if (data.posts.some((post) => post.date === today)) {
-  console.log(`A post already exists for ${today}.`);
-  process.exit(0);
-}
-
-const existingCount = data.posts.length;
-const topic = topicBank[existingCount % topicBank.length];
-const slug = topic.title
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g, "-")
-  .replace(/(^-|-$)/g, "");
-
-const post = {
-  id: `${today}-${slug}`,
-  date: today,
-  ...topic
-};
-
-data.posts.unshift(post);
-
-await writeFile(dataPath, `${JSON.stringify(data, null, 2)}\n`);
-console.log(`Created original daily post for ${today}: ${post.title}`);
+  "beginnerStart": [
+    {
+      "title": "What is Oracle Fusion HCM?",
+      "summary": "Oracle Fusion HCM is a cloud-based HR application suite used to manage people, jobs, organizations, payroll-adjacent processes, recruiting, talent, time, journeys, and employee experience.",
+      "learn": [
+        "Think of HCM as the system that stores worker data and powers HR transactions.",
+        "Core HR is the foundation. Most modules depend on workers, assignments, jobs, departments, locations, and security.",
+        "A consultant's job is to translate HR policy and business process into safe, testable system design."
+      ]
+    },
+    {
+      "title": "Beginner learning order",
+      "summary": "Start with business concepts first, then modules, then implementation steps, then interview practice.",
+      "learn": [
+        "Learn enterprise structure: enterprise, legal employer, business unit, department, job, position, grade, and location.",
+        "Learn worker lifecycle: hire, transfer, promotion, manager change, leave, termination, and rehire.",
+        "Learn security and testing because every real project depends on who can see and change data."
+      ]
+    },
+    {
+      "title": "How to study on FusionPrep AI",
+      "summary": "Use daily posts for rhythm, implementation guides for depth, labs for practice, and interview cases for job preparation.",
+      "learn": [
+        "Read one beginner card and one module guide every day.",
+        "Download the Word guide and build your own notes from the business scenario.",
+        "Practice interview answers out loud using the real-time use cases."
+      ]
+    }
+  ],
+  "implementationGuides": [
+    {
+      "module": "Core HR",
+      "level": "Foundation",
+      "doc": "docs/guides/core-hr-implementation-guide.docx",
+      "title": "Core HR Implementation Guide",
+      "summary": "Foundation guide for enterprise structure, workforce structures, worker lifecycle, security touchpoints, migration, reporting, and go-live readiness.",
+      "scenario": "A multinational company is moving from spreadsheets and a legacy HR system into a single global HCM platform while keeping country-specific legal employer rules.",
+      "steps": [
+        "Confirm the business operating model and countries in scope.",
+        "Design enterprise, legal employer, business unit, department, location, job, position, and grade usage.",
+        "Map worker lifecycle transactions such as hire, transfer, promotion, termination, and rehire.",
+        "Define security personas for employee, manager, HR specialist, and administrator.",
+        "Plan migration, validation, approvals, reporting, integrations, and cutover support."
+      ],
+      "deliverables": [
+        "Enterprise structure decision log",
+        "Workforce structure workbook",
+        "Worker lifecycle test pack",
+        "Security and data access matrix"
+      ]
+    },
+    {
+      "module": "Absences",
+      "level": "Intermediate",
+      "doc": "docs/guides/absences-implementation-guide.docx",
+      "title": "Absences Implementation Guide",
+      "summary": "Guide for absence types, plans, eligibility, accrual thinking, approvals, manager experience, payroll touchpoints, and policy testing.",
+      "scenario": "A company has annual leave, sick leave, maternity leave, and unpaid leave policies that vary by country and legal employer.",
+      "steps": [
+        "Collect policy rules for absence types, plans, eligibility, accruals, carryover, and waiting periods.",
+        "Identify which rules are global and which vary by country, worker type, or legal employer.",
+        "Design employee submission, manager approval, HR correction, and exception handling.",
+        "Confirm payroll, time, scheduling, and reporting dependencies.",
+        "Test normal, edge, retroactive, cancellation, and balance-adjustment scenarios."
+      ],
+      "deliverables": [
+        "Absence policy mapping workbook",
+        "Eligibility and accrual design notes",
+        "Approval and exception matrix",
+        "Employee-manager test scenarios"
+      ]
+    },
+    {
+      "module": "Payroll",
+      "level": "Advanced",
+      "doc": "docs/guides/payroll-implementation-guide.docx",
+      "title": "Payroll Implementation Guide",
+      "summary": "Guide for payroll discovery, calendars, elements, costing, balances, controls, upstream dependencies, parallel testing, and cutover governance.",
+      "scenario": "A client wants to run payroll for multiple worker populations and needs strong controls, reconciliation, and finance handoff.",
+      "steps": [
+        "Confirm country scope, pay groups, payroll calendars, payment frequency, and statutory complexity.",
+        "Identify earnings, deductions, benefits, absence, time, retro, costing, and finance requirements.",
+        "Design payroll controls, audit checkpoints, exception handling, and reconciliation.",
+        "Plan parallel payroll testing with success criteria and issue triage.",
+        "Coordinate cutover with HR, time, absence, finance, integrations, and support owners."
+      ],
+      "deliverables": [
+        "Payroll discovery workbook",
+        "Element and costing design log",
+        "Parallel payroll test plan",
+        "Payroll cutover and reconciliation checklist"
+      ]
+    },
+    {
+      "module": "OTL",
+      "level": "Intermediate",
